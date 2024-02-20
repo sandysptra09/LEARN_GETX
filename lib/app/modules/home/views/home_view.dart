@@ -48,6 +48,16 @@ class HomeView extends GetView<HomeController> {
                 },
                 child: Text("Go to Biodata Page"),
               ),
+            ),
+            Container(
+              margin: EdgeInsets.only(top: 10),
+              child: ElevatedButton(
+                onPressed: () {
+                  Get.toNamed('/invoice');
+                  // Get.to(ProfileView());
+                },
+                child: Text("Go to Invoice Page"),
+              ),
             )
           ],
         ),

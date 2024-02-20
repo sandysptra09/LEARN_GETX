@@ -47,7 +47,7 @@ class BiodataController extends GetxController {
 
   void submitForm() {
     print(
-        'Data formulir: $nama, $tanggalLahir, $agama, $jenisKelamin, $alamat, ${hobi.value}');
+        '$nama, $tanggalLahir, $agama, $jenisKelamin, $alamat, ${hobi.value}');
     isFormSubmitted.value = true;
   }
 }
