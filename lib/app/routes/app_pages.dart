@@ -1,8 +1,14 @@
 import 'package:get/get.dart';
-import 'package:learn_getx/app/middlewares/auth_middleware.dart';
+import 'package:learn_getx/app/modules/category/views/category_edit.dart';
+import 'package:learn_getx/app/modules/category/views/category_show.dart';
 
+import '../middlewares/auth_middleware.dart';
 import '../modules/biodata/bindings/biodata_binding.dart';
 import '../modules/biodata/views/biodata_view.dart';
+import '../modules/bottom_menu/bindings/bottom_menu_binding.dart';
+import '../modules/bottom_menu/views/bottom_menu_view.dart';
+import '../modules/category/bindings/category_binding.dart';
+import '../modules/category/views/category_view.dart';
 import '../modules/counter/bindings/counter_binding.dart';
 import '../modules/counter/views/counter_view.dart';
 import '../modules/home/bindings/home_binding.dart';
@@ -60,5 +66,23 @@ class AppPages {
       page: () => RegisterView(),
       binding: RegisterBinding(),
     ),
+    GetPage(
+      name: _Paths.CATEGORY,
+      page: () => CategoryView(),
+      binding: CategoryBinding(),
+    ),
+    GetPage(
+        name: _Paths.UpdateCategory,
+        page: () => UpdateCategory(category: Get.arguments)),
+    GetPage(
+      name: _Paths.BOTTOM_MENU,
+      page: () => BottomMenuView(),
+      binding: BottomMenuBinding(),
+    ),
+    GetPage(
+        name: _Paths.DetailCategory,
+        page: () => ShowCategoryView(
+              category: Get.arguments,
+            ))
   ];
 }

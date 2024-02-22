@@ -68,6 +68,16 @@ class HomeView extends GetView<HomeController> {
                 },
                 child: Text("Go to Form Page"),
               ),
+            ),
+            Container(
+              margin: EdgeInsets.only(top: 10),
+              child: ElevatedButton(
+                onPressed: () {
+                  Get.toNamed('/category');
+                  // Get.to(ProfileView());
+                },
+                child: Text("Go to Category page"),
+              ),
             )
           ],
         ),

@@ -10,6 +10,8 @@ abstract class Routes {
   static const INVOICE = _Paths.INVOICE;
   static const LOGIN = _Paths.LOGIN;
   static const REGISTER = _Paths.REGISTER;
+  static const CATEGORY = _Paths.CATEGORY;
+  static const BOTTOM_MENU = _Paths.BOTTOM_MENU;
 }
 
 abstract class _Paths {
@@ -21,4 +23,8 @@ abstract class _Paths {
   static const INVOICE = '/invoice';
   static const LOGIN = '/login';
   static const REGISTER = '/register';
+  static const CATEGORY = '/category';
+  static const String UpdateCategory = '/update-category';
+  static const String DetailCategory = '/detail-category';
+  static const BOTTOM_MENU = '/bottom-menu';
 }
