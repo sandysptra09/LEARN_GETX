@@ -282,17 +282,6 @@ class InvoiceView extends StatelessWidget {
                           onPressed: () => invoiceController.submitForm(),
                           child: Text('Submit'),
                         ),
-                        SizedBox(height: 16.0),
-                        Obx(() {
-                          if (invoiceController.isFormSubmitted.value) {
-                            return Text(
-                              'Output: ${invoiceController.fullname}, ${invoiceController.place_of_birth}, ${invoiceController.date_of_birth}, ${invoiceController.gender}, ${invoiceController.email}, ${invoiceController.nationality}, ${invoiceController.type_membership}, ${invoiceController.card_number}, ${invoiceController.expire_date}, ${invoiceController.payment}',
-                              style: TextStyle(fontSize: 16.0),
-                            );
-                          } else {
-                            return SizedBox.shrink();
-                          }
-                        }),
                       ],
                     ),
                   ),

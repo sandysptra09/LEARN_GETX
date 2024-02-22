@@ -75,7 +75,8 @@ class InvoiceController extends GetxController {
         lastDate: DateTime(2100));
 
     if (picked != null) {
-      final formattedDate = DateFormat('yyyy-MM-dd').format(picked);
+      final expired = picked.add(Duration(days: 7));
+      final formattedDate = DateFormat('yyyy-MM-dd').format(expired);
       expire_date.value = formattedDate;
     }
   }

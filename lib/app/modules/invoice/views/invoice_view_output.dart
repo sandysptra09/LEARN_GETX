@@ -23,6 +23,14 @@ class InvoiceViewOutput extends StatelessWidget {
                 padding: EdgeInsets.all(16),
                 child: ListView(
                   children: [
+                    Container(
+                      child: Image.network(
+                          "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/User_icon_2.svg/1024px-User_icon_2.svg.png"),
+                    ),
+                    Text(
+                      "Personal Information",
+                      style: TextStyle(fontSize: 22),
+                    ),
                     ListTile(
                       title: Text(
                           'FullName : ${invoiceController.fullname.value}'),
