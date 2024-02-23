@@ -1,7 +1,8 @@
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:http/http.dart' as http;
 
 class Api {
-  static final String baseUrl = 'http://192.168.130.239:8080/api/smartstore/';
+  static final String baseUrl = 'http://10.10.10.243:8080/api/smartstore/';
 
   static Future<Map<String, String>> getHeaders() async {
     SharedPreferences localStorage = await SharedPreferences.getInstance();

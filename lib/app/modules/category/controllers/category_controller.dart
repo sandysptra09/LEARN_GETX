@@ -72,7 +72,6 @@ class CategoryController extends GetxController {
       if (response.statusCode == 200) {
         Get.snackbar('Sukses', 'Category successfully added!');
         fetchData();
-        Get.offAndToNamed(Routes.BOTTOM_MENU); // Redirect ke halaman category
       } else {
         throw Exception('Failed to add category');
       }
@@ -115,7 +114,7 @@ class CategoryController extends GetxController {
       if (response.statusCode == 200) {
         Get.snackbar('Sukses', 'Category success updated');
         fetchData(); // Refresh the pasienList
-        Get.offAndToNamed(Routes.BOTTOM_MENU);
+        // Get.offAndToNamed(Routes.BOTTOM_MENU);
       } else {
         throw Exception('Failed to update category');
       }

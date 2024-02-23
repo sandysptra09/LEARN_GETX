@@ -16,28 +16,38 @@ class CreateCategory extends StatelessWidget {
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
-        child: Column(
-          children: [
-            TextFormField(
-              controller: categoryNameController,
-              decoration: InputDecoration(labelText: "Category name"),
+        child: Card(
+          elevation: 4,
+          margin: EdgeInsets.all(0),
+          child: Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                TextFormField(
+                  controller: categoryNameController,
+                  decoration: InputDecoration(labelText: "Category name"),
+                ),
+                SizedBox(height: 16),
+                TextFormField(
+                  controller: slugController,
+                  decoration: InputDecoration(labelText: "Slug"),
+                ),
+                SizedBox(height: 16),
+                ElevatedButton(
+                  onPressed: () {
+                    if (_validateInput()) {
+                      categoryController.createCategory(
+                        categoryNameController.text,
+                        slugController.text,
+                      );
+                    }
+                  },
+                  child: Text("Submit"),
+                ),
+              ],
             ),
-            TextFormField(
-              controller: slugController,
-              decoration: InputDecoration(labelText: "Slug"),
-            ),
-            SizedBox(
-              height: 16,
-            ),
-            ElevatedButton(
-                onPressed: () {
-                  if (_validateInput()) {
-                    categoryController.createCategory(
-                        categoryNameController.text, slugController.text);
-                  }
-                },
-                child: Text("Submit"))
-          ],
+          ),
         ),
       ),
     );

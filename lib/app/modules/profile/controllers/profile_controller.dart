@@ -30,7 +30,7 @@ class ProfileController extends GetxController {
       var headers = {'Authorization': 'Bearer $token'};
 
       // perform user details API request
-      var apiUrl = '/user';
+      var apiUrl = 'user/me';
       var response = await http.get(
         Uri.parse(Api.baseUrl + apiUrl),
         headers: headers,
